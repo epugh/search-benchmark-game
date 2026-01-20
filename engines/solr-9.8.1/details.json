@@ -1,0 +1,15 @@
+[
+  "Written in Java using SolrJ client library.",
+  "Uses Apache Solr 9.8.1 server running in cloud mode via HTTP.",
+  "Solr server started with 1GB heap memory (-m 1g).",
+  "Uses StandardAnalyzer (text_general field type in Solr).",
+  "BM25 similarity (Solr's default similarity).",
+  "Query and document caches disabled for fair benchmarking.",
+  "Multi-threaded indexing with batch size of 1000 documents.",
+  "HTTP/2 client for communication with Solr server.",
+  "Supports full Lucene query parser syntax via defType=lucene.",
+  "Includes HTTP overhead and JSON serialization/deserialization.",
+  "Single shard, single replica configuration for optimal query performance.",
+  "Documents indexed with 'text' field (indexed, not stored) and 'id' field (stored, not indexed).",
+  "Caching is enabled as that is how we run Solr."
+]

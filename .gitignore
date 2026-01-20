@@ -25,3 +25,7 @@ corpus.json
 engines/**/.project
 engines/**/.classpath
 engines/**/.settings
+# Download cache
+tmp
+# Solr server installations
+engines/**/target
