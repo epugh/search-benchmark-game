@@ -10,7 +10,7 @@ COMMANDS ?=  TOP_100_COUNT TOP_100 COUNT
 # ENGINES ?= tantivy-0.16 tantivy-0.17 tantivy-0.18 tantivy-0.19
 #ENGINES ?= tantivy-0.22 tantivy-0.24 tantivy-0.25 tantivy-main lucene-10.3.0 lucene-10.3.0-bp
 #ENGINES ?= solr-main lucene-10.3.0
-ENGINES ?= solr-9.7.0 solr-9.8.0 solr-9.8.1 solr-9.10.0
+ENGINES ?= lucene-9.9.2 solr-9.7.0 solr-9.8.0 solr-9.8.1 solr-9.10.0
 PORT ?= 8080
 WARMUP_TIME ?= 60
 
