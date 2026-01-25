@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+}
+
+version '1.0-SNAPSHOT'
+
+java {
+    sourceCompatibility = 21
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        name "Solr 10.0.0 RC3"
+        url "https://dist.apache.org/repos/dist/dev/solr/solr-10.0.0-RC3-rev-016965ccedaea5bb1261bd772bc4dadd528abbac/solr/10.0.0/maven/"
+    }
+}
+
+dependencies {
+    implementation group: 'org.apache.solr', name: 'solr-solrj', version: '10.0.0'
+    implementation group: 'org.apache.solr', name: 'solr-solrj-jetty', version: '10.0.0'
+    implementation group: 'com.eclipsesource.minimal-json', name: 'minimal-json', version: '0.9.5'
+    implementation group: 'org.slf4j', name: 'slf4j-simple', version: '2.0.9'
+}
+
+task copyDependencies(type: Copy) {
+  into "$buildDir/dependencies"
+  from configurations.runtimeClasspath
+}
